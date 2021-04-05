@@ -1,0 +1,132 @@
+/**
+ * @file
+ * Base site elements
+ */
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: $font-family-fauna-one;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: $color-blue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $color-white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+body.light {
+  color: $color-darkblue;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include rem(margin-bottom, 8px);
+  font-family: $font-family-playfair-display;
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+  transition: 150ms ease color, 150ms ease background-color;
+  &:hover {
+    color: $color-offwhite;
+    text-decoration: none;
+  }
+}
+
+p {
+  @include rem(font-size, 18px);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  @media screen and (min-width: $desktop) {
+    @include rem(font-size, 20px);
+    > span {
+      display: block;
+    }
+  }
+}
+
+img,
+audio,
+video,
+object {
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+
+ul,
+ol {
+  @include rem((
+    margin-left: 30px,
+  ));
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}

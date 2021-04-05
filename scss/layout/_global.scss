@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Global layout styles
+ */
+
+#page {
+  &.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+      "header"
+      "main"
+      "main";
+    width: 100vw;
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "header main";
+      height: 100vh;
+    }
+  }
+}

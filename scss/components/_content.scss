@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Content styles
+ */
+
+.title {
+  @include rem((
+    font-size: 72px,
+    margin-bottom: 32px,
+  ));
+  font-weight: 700;
+  @media screen and (min-width: $desktop) {
+    @include rem(font-size, 98px);
+  }
+}
+.subtitle {
+  @include rem(font-size, 28px);
+  font-family: $font-family-fauna-one;
+  font-weight: 400;
+  @media screen and (min-width: $desktop) {
+    @include rem(font-size, 30px);
+  }
+}
+
+.underline {
+  @include rem((
+    margin: 0 0 32px,
+  ));
+  border: 2px solid white;
+  display: inline-block;
+  width: 80%;
+  @media screen and (min-width: $mobile) {
+    width: 40%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

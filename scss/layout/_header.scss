@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Header styles
+ */
+
+ header {
+  background-color: gray;
+  grid-area: header;
+  .banner {
+    background-image: url("../images/background_small.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    @media screen and (min-width: $tablet) {
+      background-image: url("../images/background_large.jpeg");
+    }
+  }
+  @media screen and (min-width: $desktop) { 
+    grid-row: 1/4;
+    grid-column: 1/2;
+  }
+}
+

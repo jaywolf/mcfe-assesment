@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="description" content="404: Page not found">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  </head>
+
+  <body class="dark">
+
+    <a aria-label="Skip to main content" href="#main__content" class="sr-only visually-hidden skip-link">
+      Skip to main content
+    </a>
+
+    <div id="page" class="container">
+      <header class="header">
+        <div class="banner"></div>
+      </header>
+
+      <main id="main">
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a aria-label="Home page link" href="https://www.mediacurrent.com/">
+              <img src="./images/logo.svg" alt="Mediacurrent logo">
+            </a>
+          </div><!-- /navbar__logo -->
+
+          <div class="navbar__modeswitch">
+            <button type="button" aria-label="Color mode switcher">
+              <img src="./images/mode-icon.svg" alt="color mode icon">
+              <span>Light Mode</span> 
+            </button>
+          </div><!-- /navbar__modeswitch -->
+        </nav>
+
+        <div id="main__content">
+          <h2 class="subtitle">Error 404</h2>
+          <h1 class="title">Page Not Found</h1>
+          <span class="underline"></span>
+          <div class="content">
+            <p>
+              Looks like you're off the beaten path.
+              <span>Sorry about that.</span>
+            </p>
+          </div><!-- /content -->
+          <button type="button" class="home-button" aria-label="Take me home" onclick="location = 'https://www.mediacurrent.com'">
+            Take Me Home
+          </button>
+        </div><!-- /main__content-->
+      </main>
+    </div><!-- /page.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.min.js"></script>
+  </body>
+</html>

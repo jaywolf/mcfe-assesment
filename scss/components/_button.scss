@@ -1,0 +1,42 @@
+/**
+ * @file
+ * Button styles
+ */
+
+button {
+  @include rem((
+    border-radius: 30px,
+    padding: 18px 30px, 
+  ));
+  background: transparent;
+  border: 1px solid $color-white;
+  color: $color-white;
+  cursor: pointer;
+  filter: brightness(100%);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  margin: 0;
+  &:hover {
+    filter: brightness(90%);
+    transition: all 200ms ease;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+  &::not(:disabled) {
+    cursor: pointer;
+  }
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  // take me home
+  &.home-button {
+    font-size: 20px;
+  }
+}

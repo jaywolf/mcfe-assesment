@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Navbar styles
+ */
+
+ nav {
+  @include rem(margin-bottom, 90px);
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: $desktop) {
+    @include rem(margin-bottom, 220px);
+  }
+
+  // logo 
+  .navbar__logo {
+    a {
+      display: block;
+    }
+    img {
+      @include rem((
+        height: 56px,
+        width: 116px,
+      ));
+      @media screen and (min-width: $desktop) {
+        @include rem((
+          transform: translate(-18px),
+          width: 124px,
+        ));
+      }
+    }
+  }
+
+  // color mode switcher
+  .navbar__modeswitch {
+    align-self: center;
+    button {
+      @include rem(padding, 12px 18px);
+      img {
+        @include rem((
+          height: 26px,
+          width: 26px,
+        ));
+        display: none;
+        transform: translate(-4px);
+        @media screen and (min-width: 380px) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

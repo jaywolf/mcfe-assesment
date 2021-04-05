@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Main layout styles
+ */
+
+main {
+  @include rem(padding, 48px 16px);
+  grid-area: main;
+  @media screen and (min-width: $desktop) {
+    @include rem(padding, 32px  64px);
+    grid-column: 2/4;
+  }
+}

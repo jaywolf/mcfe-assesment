@@ -1,0 +1,63 @@
+/**
+ * @file
+ * Color mode styles
+ */
+
+// dark mode (default)
+.dark {
+
+  // main
+  main {
+    background: $color-blue;
+  }
+
+  // logo 
+  .navbar__logo {
+    img {
+      filter: hue-rotate(180deg) saturate(0) brightness(100);
+    }
+  }
+
+  // color mode switcher
+  .navbar__modeswitch {
+    button img {
+      filter: hue-rotate(180deg) saturate(0) brightness(100);
+    }
+  }
+
+  // buttons
+  .navbar__modeswitch button {
+    background: $color-blue;
+  }
+  .home-button {
+    background: $color-darkblue;
+    box-shadow: 0 2px 10px -2px #000;
+  }
+}
+
+// light mode
+.light {
+
+  // main
+  main {
+    background: $color-white;
+  }
+
+  // buttons
+  button {
+    border-color: $color-darkblue;
+    color: $color-darkblue;
+  }
+  .navbar__modeswitch button {
+    background: $color-white;
+  }
+  .home-button {
+    background: $color-white;
+    box-shadow: 0 2px 10px -2px #000;
+  }
+
+  .underline {
+    border-color: $color-darkblue;
+  }
+
+}
