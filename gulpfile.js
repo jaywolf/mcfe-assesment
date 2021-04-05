@@ -7,24 +7,18 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
-//const touch = require('gulp-touch-cmd');
-//const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
 const rename = require("gulp-rename");
-//const sassGlob = require('gulp-sass-glob');
 
 // SASS to CSS
 gulp.task('sass', function () {
   return gulp.src('./scss/styles.scss', {nodir: true})
-    //.pipe(sassGlob())
-    //.pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./_maps'))
-    .pipe(gulp.dest('./css/'))
-    //.pipe(touch());
+    .pipe(gulp.dest('./css/'));
 });
 
 // Minify JavaScript file(s)
